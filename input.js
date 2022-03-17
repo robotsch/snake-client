@@ -11,11 +11,28 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = function (key) {
-  if(key === '\u0003') process.exit()
-  if(key === 'w') connection.write("Move: up")
-  if(key === 's') connection.write("Move: down")
-  if(key === 'w') connection.write("Move: right")
-  if(key === 'a') connection.write("Move: left")
+  if(key === '\u0003')
+  switch (key) {
+
+    case 'w':
+      connection.write('Move: up');
+      break;
+    case 'a':
+      connection.write('Move: left');
+      break;
+    case 's':
+      connection.write('Move: down');
+      break;
+    case 'd':
+      connection.write('Move: right');
+      break;
+    case 'b':
+      connection.write('Say: Boop')
+      break
+    case 'f':
+      connection.write('Say: Paying respects')
+      break
+    }
 };
 
 
