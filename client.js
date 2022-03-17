@@ -11,8 +11,6 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write('Name: chr')
-
-
   })
 
   conn.on('data', (data) => {
